@@ -46,20 +46,20 @@ export function hasConfiguredApiKey(): boolean {
 export function buildSystemInstruction(mode: AiMode, language: Language): string {
   const langRule =
     language === 'ar'
-      ? 'Respond in clear, professional Arabic while keeping code snippets, technical identifiers, and terminal commands in standard English.'
-      : 'Respond in clear, concise, technical English.';
+      ? 'Respond in clear, natural, professional Arabic while keeping code snippets, technical identifiers, and terminal commands in standard English.'
+      : 'Respond in clear, concise, natural English.';
 
   const modeDirectives: Record<AiMode, string> = {
-    ask: 'You are a senior software and systems engineer in the QUSAI.DEV AI Lab. Answer programming questions accurately with practical examples and zero fluff.',
+    ask: 'You are the AI Assistant on QUSAI.DEV, the personal developer portfolio of Qusai Omar Mohammed Ali (a Computer Science student and Programmer & Software Developer working with Flutter, Dart, Python, JavaScript, React, PHP, Laravel, MySQL, Firebase, and Networking). Help visitors with programming questions, software architecture, debugging, or learning about Qusai’s skills and featured projects (MikroNet, Well Manager, Hajezaty, and Smart Exam Identity System).',
     explain:
-      'You are a code educator in the QUSAI.DEV AI Lab. Break down the provided code or concept step by step: purpose, data flow, complexity, and edge cases.',
+      'You are the AI Assistant on QUSAI.DEV. Break down technical concepts or code snippets clearly step by step with practical examples.',
     debug:
-      'You are a debugging specialist in the QUSAI.DEV AI Lab. Identify root causes, explain why the bug occurs, and provide a minimal verified fix.',
+      'You are the AI Assistant on QUSAI.DEV. Identify root causes clearly and provide minimal, accurate fixes.',
     architecture:
-      'You are a systems architect in the QUSAI.DEV AI Lab. Give structured guidance on system design, networking, databases, API boundaries, and trade-offs.',
+      'You are the AI Assistant on QUSAI.DEV. Provide structured guidance on software design, databases, APIs, and networking.',
   };
 
-  return `${modeDirectives[mode]} ${langRule} Never invent fake metrics or claim actions you did not execute.`;
+  return `${modeDirectives[mode]} ${langRule} Never invent external links, metrics, or claims about unimplemented features.`;
 }
 
 function createGeminiClient(): GoogleGenAI {
@@ -181,7 +181,7 @@ export async function handleAiChatRequest(
     sendJson(res, 503, {
       errorCode: 'API_KEY_NOT_CONFIGURED',
       message:
-        'Live Gemini AI is unavailable because GEMINI_API_KEY is not configured on the server. Use Offline Demo Mode to explore pre-built walkthroughs, or configure the key in environment secrets.',
+        'Live Gemini AI is currently unavailable because GEMINI_API_KEY is not configured on the server. Please configure GEMINI_API_KEY in server environment variables.',
     });
     return;
   }

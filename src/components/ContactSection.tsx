@@ -1,5 +1,15 @@
 import { useState } from 'react';
-import { Send, CheckCircle2, AlertCircle, Mail, Github, Linkedin, Loader2 } from 'lucide-react';
+import {
+  Send,
+  CheckCircle2,
+  AlertCircle,
+  Mail,
+  MessageCircle,
+  ArrowUpRight,
+  Github,
+  Linkedin,
+  Loader2,
+} from 'lucide-react';
 import type { Language } from '../types';
 import { getTranslations } from '../i18n/translations';
 
@@ -88,7 +98,7 @@ export function ContactSection({ lang }: ContactSectionProps) {
   };
 
   return (
-    <section className="mx-auto max-w-[1320px] px-4 py-12 sm:px-6 lg:px-8">
+    <section className="mx-auto max-w-[1200px] px-4 py-12 sm:px-6 lg:px-8">
       <div className="mb-8 border-b border-slate-400/15 pb-6">
         <h1 className="font-display text-3xl font-bold tracking-tight text-white sm:text-4xl">
           {t.contact.heading}
@@ -224,23 +234,86 @@ export function ContactSection({ lang }: ContactSectionProps) {
               {t.contact.directNote}
             </p>
 
-            <div className="mt-6 space-y-4 border-t border-slate-400/15 pt-6">
+            <div className="mt-6 space-y-3.5 border-t border-slate-400/15 pt-6">
               {t.contact.channels.map((ch) => (
                 <div key={ch.label}>
                   <div className="text-xs text-slate-400">{ch.label}</div>
-                  <div className="mt-0.5 text-sm font-semibold text-slate-100">{ch.value}</div>
+                  <div
+                    dir={ch.ltr ? 'ltr' : undefined}
+                    className={`mt-0.5 text-sm font-semibold text-slate-100 ${
+                      ch.ltr ? 'inline-block font-mono' : ''
+                    }`}
+                  >
+                    {ch.value}
+                  </div>
                 </div>
               ))}
             </div>
+
+            {/* Instant Direct Contact Actions */}
+            <div className="mt-6 border-t border-slate-400/15 pt-6">
+              <div className="mb-3 text-xs font-semibold text-slate-400">
+                {t.contact.actionsTitle}
+              </div>
+              <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2">
+                <a
+                  href="mailto:hackone465@gmail.com"
+                  className="group relative flex min-h-[54px] items-center justify-between gap-3 rounded-xl border border-blue-500/40 bg-gradient-to-br from-blue-600/20 via-indigo-600/15 to-violet-600/20 px-4 py-3 text-white shadow-[0_0_24px_rgba(37,99,235,0.14)] backdrop-blur-md transition-all duration-200 hover:-translate-y-0.5 hover:border-blue-400/75 hover:from-blue-600/30 hover:to-violet-600/30 hover:shadow-[0_0_28px_rgba(59,130,246,0.28)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
+                >
+                  <span className="flex min-w-0 items-center gap-3">
+                    <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg border border-blue-400/30 bg-blue-500/15 text-blue-300 transition-transform duration-200 group-hover:scale-105">
+                      <Mail className="h-4 w-4" />
+                    </span>
+                    <span className="min-w-0">
+                      <span className="block text-sm font-semibold leading-tight text-white">
+                        {t.contact.emailMeBtn}
+                      </span>
+                      <span
+                        dir="ltr"
+                        className="mt-0.5 block truncate font-mono text-[11px] text-blue-200/80"
+                      >
+                        hackone465@gmail.com
+                      </span>
+                    </span>
+                  </span>
+                  <ArrowUpRight className="h-4 w-4 shrink-0 text-blue-300 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 rtl:-scale-x-100" />
+                </a>
+
+                <a
+                  href="https://wa.me/967772350689"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group relative flex min-h-[54px] items-center justify-between gap-3 rounded-xl border border-emerald-500/40 bg-gradient-to-br from-emerald-600/20 via-teal-600/15 to-cyan-600/20 px-4 py-3 text-white shadow-[0_0_24px_rgba(16,185,129,0.14)] backdrop-blur-md transition-all duration-200 hover:-translate-y-0.5 hover:border-emerald-400/75 hover:from-emerald-600/30 hover:to-teal-600/30 hover:shadow-[0_0_28px_rgba(16,185,129,0.28)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400"
+                >
+                  <span className="flex min-w-0 items-center gap-3">
+                    <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg border border-emerald-400/30 bg-emerald-500/15 text-emerald-300 transition-transform duration-200 group-hover:scale-105">
+                      <MessageCircle className="h-4 w-4" />
+                    </span>
+                    <span className="min-w-0">
+                      <span className="block text-sm font-semibold leading-tight text-white">
+                        {t.contact.whatsappMeBtn}
+                      </span>
+                      <span
+                        dir="ltr"
+                        className="mt-0.5 block truncate font-mono text-[11px] text-emerald-200/80"
+                      >
+                        +967772350689
+                      </span>
+                    </span>
+                  </span>
+                  <ArrowUpRight className="h-4 w-4 shrink-0 text-emerald-300 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 rtl:-scale-x-100" />
+                </a>
+              </div>
+            </div>
           </div>
 
-          <div className="mt-8 border-t border-slate-400/15 pt-6">
+          <div className="mt-6 border-t border-slate-400/15 pt-5">
             <div className="flex flex-wrap items-center gap-3">
               <a
                 href="https://github.com"
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex min-h-[40px] items-center gap-2 rounded-xl border border-slate-400/20 bg-slate-900/70 px-4 py-2 text-xs font-semibold text-slate-200 transition-colors hover:border-blue-500/40 hover:text-white"
+                className="inline-flex min-h-[40px] items-center gap-2 rounded-xl border border-slate-400/20 bg-slate-900/70 px-4 py-2 text-xs font-semibold text-slate-200 transition-all duration-200 hover:-translate-y-0.5 hover:border-blue-500/40 hover:text-white"
               >
                 <Github className="h-4 w-4" />
                 <span>GitHub</span>
@@ -249,17 +322,10 @@ export function ContactSection({ lang }: ContactSectionProps) {
                 href="https://linkedin.com"
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex min-h-[40px] items-center gap-2 rounded-xl border border-slate-400/20 bg-slate-900/70 px-4 py-2 text-xs font-semibold text-slate-200 transition-colors hover:border-blue-500/40 hover:text-white"
+                className="inline-flex min-h-[40px] items-center gap-2 rounded-xl border border-slate-400/20 bg-slate-900/70 px-4 py-2 text-xs font-semibold text-slate-200 transition-all duration-200 hover:-translate-y-0.5 hover:border-blue-500/40 hover:text-white"
               >
                 <Linkedin className="h-4 w-4" />
                 <span>LinkedIn</span>
-              </a>
-              <a
-                href="mailto:contact@qusai.dev"
-                className="inline-flex min-h-[40px] items-center gap-2 rounded-xl border border-slate-400/20 bg-slate-900/70 px-4 py-2 text-xs font-semibold text-slate-200 transition-colors hover:border-blue-500/40 hover:text-white"
-              >
-                <Mail className="h-4 w-4" />
-                <span>contact@qusai.dev</span>
               </a>
             </div>
           </div>
