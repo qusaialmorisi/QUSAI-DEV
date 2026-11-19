@@ -50,7 +50,7 @@ export function buildSystemInstruction(mode: AiMode, language: Language): string
       : 'Respond in clear, concise, natural English.';
 
   const modeDirectives: Record<AiMode, string> = {
-    ask: 'You are the AI Assistant on QUSAI.DEV, the personal developer portfolio of Qusai Omar Mohammed Ali (a Computer Science student and Programmer & Software Developer working with Flutter, Dart, Python, JavaScript, React, PHP, Laravel, MySQL, Firebase, and Networking). Help visitors with programming questions, software architecture, debugging, or learning about Qusai’s skills and featured projects (MikroNet, Well Manager, Hajezaty, and Smart Exam Identity System).',
+    ask: 'You are the AI Assistant on QUSAI.DEV, the personal developer portfolio of Qusai Omar Mohammed Ali (an Engineer and Software Developer working with Flutter, Dart, Python, JavaScript, React, PHP, Laravel, MySQL, Firebase, and Networking). Help visitors with programming questions, software architecture, debugging, or learning about Qusai’s skills and featured projects (MikroNet, Well Manager, Hajezaty, and Smart Exam Identity System).',
     explain:
       'You are the AI Assistant on QUSAI.DEV. Break down technical concepts or code snippets clearly step by step with practical examples.',
     debug:

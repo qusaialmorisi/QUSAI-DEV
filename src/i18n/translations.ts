@@ -112,7 +112,7 @@ export const TRANSLATIONS = {
       role: 'Programmer & Software Developer',
       headline: 'Designing Practical Software, Web Platforms, and Connected Systems.',
       intro:
-        'I am a Computer Science student and software developer focused on building clean web applications, cross-platform mobile apps, and reliable management systems.',
+        'I am an engineer and software developer focused on building clean web applications, cross-platform mobile apps, and reliable management systems.',
       exploreProjectsBtn: 'Explore My Projects',
       contactMeBtn: 'Contact Me',
       visualAlt: 'QUSAI.DEV developer portfolio core artwork',
@@ -122,7 +122,7 @@ export const TRANSLATIONS = {
         {
           section: 'about' as const,
           title: 'About Me & Technical Stack',
-          desc: 'Computer Science student working across Flutter, Dart, Python, JavaScript, React, PHP, Laravel, MySQL, Firebase, and Networking.',
+          desc: 'Engineer and software developer working across Flutter, Dart, Python, JavaScript, React, PHP, Laravel, MySQL, Firebase, and Networking.',
           cta: 'View Skills',
         },
         {
@@ -142,7 +142,7 @@ export const TRANSLATIONS = {
     about: {
       heading: 'About Me',
       subheading:
-        'Computer Science student and software developer building reliable applications across mobile, web, backend, and networking.',
+        'Engineer and software developer building reliable applications across mobile, web, backend, and networking.',
       introTitle: 'Background',
       introBody:
         'I enjoy turning real operational needs into clean, maintainable software—whether designing cross-platform mobile experiences in Flutter, crafting responsive web interfaces in React, building structured APIs with Laravel and Python, or integrating network automation systems.',
@@ -275,7 +275,7 @@ export const TRANSLATIONS = {
       role: 'مبرمج ومطور برمجيات',
       headline: 'تطوير برمجيات عملية، منصات ويب حديثة، وأنظمة مترابطة.',
       intro:
-        'طالب علوم حاسوب ومطور برمجيات أعمل على بناء تطبيقات ويب متجاوبة، تطبيقات جوال متعددة المنصات، وأنظمة إدارة موثوقة.',
+        'مهندس ومطور برمجيات أعمل على بناء تطبيقات ويب متجاوبة، تطبيقات جوال متعددة المنصات، وأنظمة إدارة موثوقة.',
       exploreProjectsBtn: 'استكشف مشاريعي',
       contactMeBtn: 'تواصل معي',
       visualAlt: 'تصميم تعريفي لمنصة قصي عمر محمد علي',
@@ -285,7 +285,7 @@ export const TRANSLATIONS = {
         {
           section: 'about' as const,
           title: 'نبذة عني والمهارات',
-          desc: 'طالب علوم حاسوب ومطور يعمل بتقنيات Flutter و Dart و Python و JavaScript و React و PHP و Laravel و MySQL و Firebase والشبكات.',
+          desc: 'مهندس ومطور برمجيات يعمل بتقنيات Flutter و Dart و Python و JavaScript و React و PHP و Laravel و MySQL و Firebase والشبكات.',
           cta: 'عرض المهارات',
         },
         {
@@ -305,7 +305,7 @@ export const TRANSLATIONS = {
     about: {
       heading: 'نبذة عني',
       subheading:
-        'طالب علوم حاسوب ومطور برمجيات أبني تطبيقات عملية تجمع بين الويب، الجوال، الخوادم، وأنظمة الشبكات.',
+        'مهندس ومطور برمجيات أبني تطبيقات عملية تجمع بين الويب، الجوال، الخوادم، وأنظمة الشبكات.',
       introTitle: 'الخلفية التقنية',
       introBody:
         'أهتم بتحويل الاحتياجات التشغيلية إلى برمجيات واضحة وسهلة الصيانة؛ سواء عبر تطوير تطبيقات الجوال باستخدام Flutter و Dart، أو بناء واجهات الويب التفاعلية بـ React، أو برمجة الخوادم وقواعد البيانات بـ Laravel و Python و MySQL و Firebase، إلى جانب أنظمة الشبكات.',

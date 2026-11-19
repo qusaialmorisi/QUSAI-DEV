@@ -124,10 +124,10 @@ describe('Portfolio Navigation, Bilingual Switching, and RTL/LTR Layout', () => 
 });
 
 describe('About Me & My Projects Sections', () => {
-  it('displays Computer Science developer background and all 10 required skills', () => {
+  it('displays Engineer and software developer background and all 10 required skills', () => {
     render(<AboutSection lang="en" />);
 
-    expect(screen.getByText(/Computer Science student and software developer/i)).toBeInTheDocument();
+    expect(screen.getByText(/Engineer and software developer building reliable applications/i)).toBeInTheDocument();
 
     const expectedSkills = [
       'Flutter',
